@@ -22,7 +22,16 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
-      run: npx playwright test
+      # "Full Reset Cycle" is excluded here — it's the one test that changes
+      # and restores a real password on the dedicated forgot-password test
+      # account, and it can also collide with the Real OTP test above if
+      # both fire concurrently against the same account. Run it manually
+      # (npx playwright test --grep "Full Reset Cycle") when you need it.
+      run: npx playwright test --grep-invert "Full Reset Cycle"
+      env:
+        CLIENT_ID: ${{ secrets.CLIENT_ID }}
+        CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+        REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
