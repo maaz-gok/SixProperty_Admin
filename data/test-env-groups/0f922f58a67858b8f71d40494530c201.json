@@ -1,0 +1,1 @@
+{"id":"0f922f58a67858b8f71d40494530c201","fullName":"Auth/admin-login-security.spec.js:37:7","name":"after logout, direct navigation and browser back both redirect to sign-in @critical","status":"failed","testResultsByEnv":{"default":"825192dd3e67acd5ee7a164fb614e3fb"}}

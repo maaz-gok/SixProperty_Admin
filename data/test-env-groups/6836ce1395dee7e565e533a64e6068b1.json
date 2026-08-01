@@ -1,0 +1,1 @@
+{"id":"6836ce1395dee7e565e533a64e6068b1","fullName":"Auth/admin-login-security.spec.js:72:7","name":"no credential or token value appears in the URL after login @regression","status":"failed","testResultsByEnv":{"default":"0f1d9197b929c5ca76a4d3163281730a"}}

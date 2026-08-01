@@ -1,0 +1,1 @@
+{"id":"e259466d0c647c87cb3d87f4440e9058","fullName":"Auth/admin-login-security.spec.js:6:7","name":"no login request is sent while the form is in an invalid state @critical","status":"failed","testResultsByEnv":{"default":"2e20888b651091f549775d7dbb0a9d71"}}

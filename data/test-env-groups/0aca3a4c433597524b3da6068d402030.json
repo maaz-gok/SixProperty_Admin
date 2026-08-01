@@ -1,0 +1,1 @@
+{"id":"0aca3a4c433597524b3da6068d402030","fullName":"Auth/admin-login-form.spec.js:133:7","name":"SQL injection and XSS payloads are rejected by the email format constraint @critical","status":"failed","testResultsByEnv":{"default":"9671fad975abee651a39a60b525aaa4e"}}

@@ -1,0 +1,1 @@
+{"id":"6824a52d845117dc26fc932245b2bdf0","fullName":"Auth/admin-login-known-issues.spec.js:44:7","name":"every interactive login control shows a pointer cursor on hover @regression","status":"failed","testResultsByEnv":{"default":"b30f897ae5f6ed362e868fe5e2c8c184"}}

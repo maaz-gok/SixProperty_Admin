@@ -1,0 +1,1 @@
+{"id":"3d8cd76c79fbc997a832120943872ad9","fullName":"Auth/admin-login-form.spec.js:174:7","name":"leading/trailing spaces are preserved and long values are capped at maxlength @regression","status":"failed","testResultsByEnv":{"default":"1f0bae40ecd913e9ee6695a13422969f"}}
