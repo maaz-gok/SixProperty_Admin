@@ -1,0 +1,9 @@
+{
+  "unicodeEmail": "üñîçødé.üser@example.com",
+  "emojiEmail": "😀user@example.com",
+  "veryLongEmail": "a-very-long-local-part-that-keeps-going-and-going-and-going-well-past-what-most-forms-expect@example.com",
+  "veryLongPassword": "P@ssw0rd-P@ssw0rd-P@ssw0rd-P@ssw0rd-P@ssw0rd-P@ssw0rd-P@ssw0rd-P@ssw0rd-P@ssw0rd-P@ssw0rd",
+  "passwordWithLeadingSpace": "  Sup3rSecret!",
+  "passwordWithTrailingSpace": "Sup3rSecret!  ",
+  "shortPassword": "a"
+}

@@ -1,0 +1,11 @@
+{
+  "missingAt": "not-an-email.com",
+  "missingDomain": "user@",
+  "doubleAt": "user@@example.com",
+  "trailingDot": "user@example.com.",
+  "spacesOnly": "   ",
+  "validWithLeadingSpace": "  valid.user@example.com",
+  "validWithTrailingSpace": "valid.user@example.com  ",
+  "validUppercase": "VALID.USER@EXAMPLE.COM",
+  "validLowercase": "valid.user@example.com"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "sixproperty_admin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "allure:generate": "allure generate",
+    "allure:open": "allure open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.1.2",
+    "allure": "^3.14.3",
+    "allure-playwright": "^3.10.2",
+    "dotenv": "^17.4.2"
+  }
+}
