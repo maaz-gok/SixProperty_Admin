@@ -33,4 +33,5 @@ P3
 
 ## Screenshot Reference
 
-`evidence/forgot-password-touch-target.png` — taken on a mobile-sized screen, showing the "Forgot Password?" link's actual tappable height (20px) next to the "Log In" button's height (40px) for comparison.
+- `evidence/forgot-password-touch-target.png` — taken on a mobile-sized screen, showing the "Forgot Password?" link's actual tappable height (20px) next to the "Log In" button's height (40px) for comparison.
+- `evidence/forgot-password-touch-target-console.png` — manually verified at 390x844 via DevTools console (`getBoundingClientRect().height`): the link measures 19.5px, below the WCAG 2.5.8 minimum of 24px.

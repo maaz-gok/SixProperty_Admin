@@ -1,4 +1,5 @@
-import { readFile } from 'fs/promises';
+import { readFile, readdir } from 'fs/promises';
+import path from 'path';
 
 const apiBase = process.env.KANBAN_BASE_URL || 'https://pm-gok-release.onrender.com';
 const loginEmail = process.env.KANBAN_EMAIL;
@@ -192,63 +193,178 @@ function normalizeDescription(text) {
     .replace(/\r\n/g, '\n')
     .replace(/\r/g, '\n');
 
-  const sanitizedPaths = normalized
+  // The Kanban tool renders the description as HTML (existing tasks store
+  // <h3>/<p> tags), so emit real markup: bold section labels, an <ol> for
+  // numbered steps, a <ul> for bullet points, <code> for backtick spans,
+  // and <pre><code> for fenced code blocks (indentation/blank lines kept
+  // as-is inside a fence — everything else is trimmed).
+  const escape = value => value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+  const renderInline = value => escape(value).replace(/`([^`]+)`/g, '<code>$1</code>');
+  const sanitize = value => value
     .replace(/(?:Resources|resources)\/[\w\-\.\/]+/g, 'a large file')
     .replace(/\(e\.g\.\s*a large file\)/gi, '(e.g. a large file)')
     .replace(/-\s*\d+(?:\.\d+)?MB/gi, '')
     .replace(/https?:\/\/[\w\-\.\/]+/gi, 'the app');
 
-  // The Kanban tool renders the description as HTML (existing tasks store
-  // <h3>/<p> tags), so emit real markup: bold section labels and an <ol>
-  // for the numbered steps. Plain text with newlines collapses to one line.
-  const escape = value => value
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;');
-
-  const lines = sanitizedPaths
-    .split('\n')
-    .map(line => line.trim())
-    .filter(Boolean);
-
+  const rawLines = normalized.split('\n');
   const html = [];
   let steps = null;
+  let bullets = null;
 
-  const flushSteps = () => {
+  const flushLists = () => {
     if (steps) {
-      html.push(`<ol>\n${steps.map(step => `  <li>${escape(step)}</li>`).join('\n')}\n</ol>`);
+      html.push(`<ol>\n${steps.map(step => `  <li>${renderInline(step)}</li>`).join('\n')}\n</ol>`);
       steps = null;
+    }
+    if (bullets) {
+      html.push(`<ul>\n${bullets.map(item => `  <li>${renderInline(item)}</li>`).join('\n')}\n</ul>`);
+      bullets = null;
     }
   };
 
-  for (const line of lines) {
+  let i = 0;
+  while (i < rawLines.length) {
+    const fence = rawLines[i].trim().match(/^```(\w*)\s*$/);
+    if (fence) {
+      flushLists();
+      const lang = fence[1];
+      const codeLines = [];
+      i++;
+      while (i < rawLines.length && !/^```\s*$/.test(rawLines[i].trim())) {
+        codeLines.push(rawLines[i]);
+        i++;
+      }
+      i++; // skip closing fence
+      const classAttr = lang ? ` class="language-${escape(lang)}"` : '';
+      html.push(`<pre><code${classAttr}>${escape(codeLines.join('\n'))}</code></pre>`);
+      continue;
+    }
+
+    const line = sanitize(rawLines[i]).trim();
+    i++;
+    if (!line) continue;
+
     const heading = line.match(/^#{2,6}\s+(.+)$/);
     const step = line.match(/^\d+\.\s+(.+)$/);
+    const bullet = line.match(/^[-*]\s+(.+)$/);
 
     if (heading) {
-      flushSteps();
+      flushLists();
       const label = heading[1].replace(/:\s*$/, '') + ':';
       if (/^description/i.test(label)) continue;
       html.push(`<p><strong>${escape(label)}</strong></p>`);
     } else if (step) {
+      if (bullets) flushLists();
       if (!steps) steps = [];
       steps.push(step[1]);
+    } else if (bullet) {
+      if (steps) flushLists();
+      if (!bullets) bullets = [];
+      bullets.push(bullet[1]);
     } else {
-      flushSteps();
-      html.push(`<p>${escape(line)}</p>`);
+      flushLists();
+      html.push(`<p>${renderInline(line)}</p>`);
     }
   }
-  flushSteps();
+  flushLists();
 
   return html.join('\n');
+}
+
+function extractTitle(raw) {
+  const lines = raw.split('\n');
+  const titleHeadingIndex = lines.findIndex(line => /^##\s+Title\s*$/i.test(line.trim()));
+  if (titleHeadingIndex !== -1) {
+    for (let i = titleHeadingIndex + 1; i < lines.length; i++) {
+      const candidate = lines[i].trim();
+      if (!candidate) continue;
+      if (/^#{1,6}\s/.test(candidate)) break;
+      return candidate;
+    }
+  }
+  const fallback = lines.find(line => line.trim() && !/^#{1,6}\s/.test(line.trim()));
+  return (fallback || 'Kanban bug report').trim();
+}
+
+const PRIORITY_MAP = {
+  p1: 'Critical', critical: 'Critical',
+  p2: 'High', high: 'High',
+  p3: 'Medium', medium: 'Medium',
+  p4: 'Low', low: 'Low',
+};
+
+// Reads the bug file's own "## Priority" section (e.g. "P2") instead of
+// hardcoding one value for every bug.
+function resolvePriority(raw) {
+  const lines = raw.split('\n');
+  const headingIndex = lines.findIndex(line => /^##\s+Priority\s*$/i.test(line.trim()));
+  if (headingIndex !== -1) {
+    for (let i = headingIndex + 1; i < lines.length; i++) {
+      const candidate = lines[i].trim();
+      if (!candidate) continue;
+      if (/^#{1,6}\s/.test(candidate)) break;
+      return PRIORITY_MAP[candidate.toLowerCase()] || 'Medium';
+    }
+  }
+  return 'Medium';
+}
+
+function stripTitleSection(raw) {
+  const lines = raw.split('\n');
+  const start = /^#\s+/.test(lines[0]?.trim() || '') ? 1 : 0;
+  const kept = [];
+  let inTitleSection = false;
+  for (let i = start; i < lines.length; i++) {
+    const trimmed = lines[i].trim();
+    const isHeading = /^#{2,6}\s+/.test(trimmed);
+    if (isHeading && /^Title\s*$/i.test(trimmed.replace(/^#{2,6}\s+/, ''))) {
+      inTitleSection = true;
+      continue;
+    }
+    if (isHeading && inTitleSection) {
+      inTitleSection = false;
+    }
+    if (inTitleSection) continue;
+    kept.push(lines[i]);
+  }
+  return kept.join('\n');
+}
+
+// Finds the tests/ subfolder that actually holds the specs for this bug,
+// by matching the bug file's naming prefix (e.g. "admin-login") against
+// spec filenames on disk — no hardcoded folder name to fall out of date.
+async function resolveTestDir(filePath, testsRoot = 'tests') {
+  const baseName = path.basename(filePath, path.extname(filePath));
+  const prefix = baseName.split('-').slice(0, 2).join('-');
+
+  let entries;
+  try {
+    entries = await readdir(testsRoot, { withFileTypes: true });
+  } catch {
+    return `${testsRoot}/`;
+  }
+
+  for (const entry of entries) {
+    if (!entry.isDirectory()) continue;
+    const dirPath = path.join(testsRoot, entry.name);
+    const files = await readdir(dirPath);
+    if (files.some(f => f.startsWith(prefix))) {
+      return `${dirPath}/`;
+    }
+  }
+  return `${testsRoot}/`;
 }
 
 async function main() {
   log('Reading bug file:', bugFilePath);
   const raw = await readFile(bugFilePath, 'utf8');
-  const [titleLine, ...rest] = raw.split('\n');
-  const title = titleLine.replace(/^#\s*/, '').trim() || 'Kanban bug report';
-  const description = normalizeDescription(rest.join('\n'));
+  const title = extractTitle(raw);
+  const testDir = await resolveTestDir(bugFilePath);
+  const REPORTED_VIA_NOTE = `<p><code>Reported using the Playwright automated test suite (${testDir}).</code></p>`;
+  const description = normalizeDescription(stripTitleSection(raw)) + '\n<br/>\n' + REPORTED_VIA_NOTE;
 
   const detected = detectAssignee(raw);
   const assigneeMap = { fe: assigneeFeId, be: assigneeBeId };
@@ -273,14 +389,17 @@ async function main() {
   const resolvedProjectId = await getProjectId(token);
   log('Resolved projectId:', resolvedProjectId);
 
+  const priority = resolvePriority(raw);
+  log('Resolved priority:', priority);
+
   const payload = {
     projectId: resolvedProjectId,
     title,
     description,
     status: 'To Do',
-    priority: 'Medium',
+    priority,
     type: 'Bug',
-    ...(assigneeId && { assignee: assigneeId }),
+    ...(assigneeId && { assignees: [assigneeId] }),
   };
 
   const existing = await findTaskByTitle(token, resolvedProjectId, title);
@@ -288,7 +407,8 @@ async function main() {
     log('Task already exists, updating description only:', existing._id);
     const updated = await updateTask(token, existing._id, {
       description,
-      ...(assigneeId && { assignee: assigneeId }),
+      priority,
+      ...(assigneeId && { assignees: [assigneeId] }),
     });
     log('Task updated successfully:', updated);
     if (attachmentPaths.length > 0) {
