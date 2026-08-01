@@ -2,6 +2,7 @@ import { test, expect } from '../../src/fixtures/base.js';
 import { LoginPage } from '../../src/pages/LoginPage.js';
 import { DashboardPage } from '../../src/pages/DashboardPage.js';
 import wrongCredentials from '../data/wrong-credentials.json' with { type: 'json' };
+import adminCredentials from '../data/credentials.json' with { type: 'json' };
 
 test.describe('Admin Login - Login Button', () => {
   test('button stays clickable on an empty form and surfaces validation instead of a disabled state @regression', async ({ page }) => {
@@ -71,10 +72,7 @@ test.describe('Admin Login - Successful Login', () => {
 
     const login = new LoginPage(page);
     await login.goto();
-    const dashboard = await login.loginAs({
-      email: process.env.ADMIN_EMAIL,
-      password: process.env.ADMIN_PASSWORD,
-    });
+    const dashboard = await login.loginAs(adminCredentials);
 
     await expect(page).toHaveURL(/\/dashboard$/);
     await expect(dashboard.heading).toBeVisible();
@@ -96,7 +94,7 @@ test.describe('Admin Login - Failed Login', () => {
   test('wrong password shows the same generic authentication error @critical', async ({ page }) => {
     const login = new LoginPage(page);
     await login.goto();
-    await login.fillEmail(process.env.ADMIN_EMAIL);
+    await login.fillEmail(adminCredentials.email);
     await login.fillPassword(wrongCredentials.wrongPassword.password);
     await login.submit();
     await expect(login.errorBanner).toBeVisible();

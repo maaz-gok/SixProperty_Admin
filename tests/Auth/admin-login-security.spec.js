@@ -1,6 +1,7 @@
 import { test, expect } from '../../src/fixtures/base.js';
 import { LoginPage } from '../../src/pages/LoginPage.js';
 import securityPayloads from '../data/security-payloads.json' with { type: 'json' };
+import adminCredentials from '../data/credentials.json' with { type: 'json' };
 
 test.describe('Admin Login - Security', () => {
   test('no login request is sent while the form is in an invalid state @critical', async ({ page }) => {
@@ -37,10 +38,7 @@ test.describe('Admin Login - Security', () => {
   test('after logout, direct navigation and browser back both redirect to sign-in @critical', async ({ page }) => {
     const login = new LoginPage(page);
     await login.goto();
-    const dashboard = await login.loginAs({
-      email: process.env.ADMIN_EMAIL,
-      password: process.env.ADMIN_PASSWORD,
-    });
+    const dashboard = await login.loginAs(adminCredentials);
     await expect(page).toHaveURL(/\/dashboard$/);
 
     await dashboard.signOutButton.click();
@@ -72,14 +70,11 @@ test.describe('Admin Login - Security', () => {
   test('no credential or token value appears in the URL after login @regression', async ({ page }) => {
     const login = new LoginPage(page);
     await login.goto();
-    await login.loginAs({
-      email: process.env.ADMIN_EMAIL,
-      password: process.env.ADMIN_PASSWORD,
-    });
+    await login.loginAs(adminCredentials);
     await expect(page).toHaveURL(/\/dashboard$/);
 
-    expect(page.url()).not.toContain(process.env.ADMIN_PASSWORD);
-    expect(page.url()).not.toContain(encodeURIComponent(process.env.ADMIN_EMAIL));
+    expect(page.url()).not.toContain(adminCredentials.password);
+    expect(page.url()).not.toContain(encodeURIComponent(adminCredentials.email));
   });
 
   test('XSS payloads submitted through the password field are never executed @critical', async ({ page }) => {

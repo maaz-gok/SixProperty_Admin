@@ -1,6 +1,7 @@
 import { test, expect } from '../../src/fixtures/base.js';
 import { LoginPage } from '../../src/pages/LoginPage.js';
 import wrongCredentials from '../data/wrong-credentials.json' with { type: 'json' };
+import adminCredentials from '../data/credentials.json' with { type: 'json' };
 
 test.describe('Admin Login - Keyboard Accessibility', () => {
   test('the full login flow is completable using only the keyboard @critical', async ({ page }) => {
@@ -10,11 +11,11 @@ test.describe('Admin Login - Keyboard Accessibility', () => {
     await page.locator('body').click({ position: { x: 5, y: 5 } });
     await page.keyboard.press('Tab');
     await expect(login.emailInput).toBeFocused();
-    await page.keyboard.type(process.env.ADMIN_EMAIL);
+    await page.keyboard.type(adminCredentials.email);
 
     await page.keyboard.press('Tab');
     await expect(login.passwordInput).toBeFocused();
-    await page.keyboard.type(process.env.ADMIN_PASSWORD);
+    await page.keyboard.type(adminCredentials.password);
     await page.keyboard.press('Enter');
 
     await expect(page).toHaveURL(/\/dashboard$/);
