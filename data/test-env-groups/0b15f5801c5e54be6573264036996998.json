@@ -1,0 +1,1 @@
+{"id":"0b15f5801c5e54be6573264036996998","fullName":"Auth/admin-forgot-password-form.spec.js:27:7","name":"empty email shows a required validation error and sends no request @critical","status":"passed","testResultsByEnv":{"default":"4722a0938e2729a19bdf12d537e4e85d"}}

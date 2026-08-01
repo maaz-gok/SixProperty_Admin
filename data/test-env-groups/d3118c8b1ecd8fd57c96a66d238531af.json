@@ -1,1 +1,1 @@
-{"id":"d3118c8b1ecd8fd57c96a66d238531af","fullName":"Auth/admin-login-page-load.spec.js:69:7","name":"logo remains visible and legible across viewport sizes @regression","status":"passed","testResultsByEnv":{"default":"3a76923b5aa17ed6fd59fcf2bb92a525"}}
+{"id":"d3118c8b1ecd8fd57c96a66d238531af","fullName":"Auth/admin-login-page-load.spec.js:69:7","name":"logo remains visible and legible across viewport sizes @regression","status":"passed","testResultsByEnv":{"default":"c0550502abb630d742b5166b4d6c590f"}}
