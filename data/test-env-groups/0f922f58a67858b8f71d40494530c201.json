@@ -1,1 +1,1 @@
-{"id":"0f922f58a67858b8f71d40494530c201","fullName":"Auth/admin-login-security.spec.js:38:7","name":"after logout, direct navigation and browser back both redirect to sign-in @critical","status":"passed","testResultsByEnv":{"default":"8e395502e27e91e95042ef84d51e3282"}}
+{"id":"0f922f58a67858b8f71d40494530c201","fullName":"Auth/admin-login-security.spec.js:38:7","name":"after logout, direct navigation and browser back both redirect to sign-in @critical","status":"passed","testResultsByEnv":{"default":"f6ca2c4c6868a9e1afc41e7d5e964c22"}}
