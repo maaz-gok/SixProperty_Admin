@@ -1,1 +1,1 @@
-{"id":"ab92a7da73a2d80e70edc6901940e2bd","fullName":"Auth/admin-login-submission.spec.js:106:7","name":"both wrong shows the same generic authentication error (no user enumeration) @critical","status":"failed","testResultsByEnv":{"default":"07ecf14b18884a87a538fa7c70374be8"}}
+{"id":"ab92a7da73a2d80e70edc6901940e2bd","fullName":"Auth/admin-login-submission.spec.js:104:7","name":"both wrong shows the same generic authentication error (no user enumeration) @critical","status":"passed","testResultsByEnv":{"default":"4f8be06520d042e1f9f82bf01ebf5e56"}}

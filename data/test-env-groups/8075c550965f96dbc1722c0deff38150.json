@@ -1,1 +1,1 @@
-{"id":"8075c550965f96dbc1722c0deff38150","fullName":"Auth/admin-login-a11y-responsive.spec.js:79:9","name":"form stays within the viewport with no overflow (desktop) @regression","status":"failed","testResultsByEnv":{"default":"d165cd149158758b8b1e6a3006c728a4"}}
+{"id":"8075c550965f96dbc1722c0deff38150","fullName":"Auth/admin-login-a11y-responsive.spec.js:80:9","name":"form stays within the viewport with no overflow (desktop) @regression","status":"passed","testResultsByEnv":{"default":"041c083cc7dd94bd4bc94e005842efca"}}

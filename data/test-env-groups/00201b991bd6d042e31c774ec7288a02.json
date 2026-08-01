@@ -1,1 +1,1 @@
-{"id":"00201b991bd6d042e31c774ec7288a02","fullName":"Auth/admin-login-form.spec.js:159:7","name":"password is masked by default @smoke","status":"failed","testResultsByEnv":{"default":"4fca98bd585bff886edbfb47ebab036e"}}
+{"id":"00201b991bd6d042e31c774ec7288a02","fullName":"Auth/admin-login-form.spec.js:159:7","name":"password is masked by default @smoke","status":"passed","testResultsByEnv":{"default":"59847fa066ba353be756ec230a1c7124"}}

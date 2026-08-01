@@ -1,1 +1,1 @@
-{"id":"c593b6226fd68f0983fbe2e4f0e57df7","fullName":"Auth/admin-login-page-load.spec.js:85:7","name":"page load timing stays within a generous baseline @regression","status":"failed","testResultsByEnv":{"default":"1334c195ffbd998a412dc42d5e1a804f"}}
+{"id":"c593b6226fd68f0983fbe2e4f0e57df7","fullName":"Auth/admin-login-page-load.spec.js:85:7","name":"page load timing stays within a generous baseline @regression","status":"passed","testResultsByEnv":{"default":"aa4f76090bfe6110bdd6525f1ff62d5d"}}

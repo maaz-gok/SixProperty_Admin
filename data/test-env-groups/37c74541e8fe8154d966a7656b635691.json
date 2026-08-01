@@ -1,1 +1,1 @@
-{"id":"37c74541e8fe8154d966a7656b635691","fullName":"Auth/admin-login-form.spec.js:74:7","name":"invalid email formats are blocked before submission @critical","status":"failed","testResultsByEnv":{"default":"c3c7909c241038b7408ca53750c83bfa"}}
+{"id":"37c74541e8fe8154d966a7656b635691","fullName":"Auth/admin-login-form.spec.js:74:7","name":"invalid email formats are blocked before submission @critical","status":"passed","testResultsByEnv":{"default":"0367262c3e3aa17b61543b12558f07af"}}
