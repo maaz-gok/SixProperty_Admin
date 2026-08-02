@@ -1,0 +1,139 @@
+{
+  "xssPayload": {
+    "message": "Platform activity fetched successfully.",
+    "status": 200,
+    "data": {
+      "summary": {
+        "users": 132,
+        "activeUsers": 105,
+        "suspendedUsers": 1,
+        "landlords": 86,
+        "tenants": 29,
+        "properties": 20,
+        "openRequests": 18,
+        "resolvedRequests": 15,
+        "overduePayments": 24,
+        "rentCollected": 26100
+      },
+      "recent": [
+        {
+          "type": "user_signup",
+          "title": "<script>window.__xssFired = true;</script>",
+          "description": "<img src=x onerror=\"window.__xssFired = true\">",
+          "message": "<script>window.__xssFired = true;</script> signed up as a tenant.",
+          "at": "2026-07-29T17:27:41.770Z"
+        }
+      ]
+    }
+  },
+  "manyRecords": {
+    "message": "Platform activity fetched successfully.",
+    "status": 200,
+    "data": {
+      "summary": {
+        "users": 132,
+        "activeUsers": 105,
+        "suspendedUsers": 1,
+        "landlords": 86,
+        "tenants": 29,
+        "properties": 20,
+        "openRequests": 18,
+        "resolvedRequests": 15,
+        "overduePayments": 24,
+        "rentCollected": 26100
+      },
+      "recent": [
+        { "type": "rent_paid", "title": "Rent paid", "description": "record-1", "message": "record-1 paid rent.", "at": "2026-08-01T10:00:00.000Z" },
+        { "type": "user_signup", "title": "New tenant", "description": "record-2", "message": "record-2 signed up as a tenant.", "at": "2026-07-31T10:00:00.000Z" },
+        { "type": "user_signup", "title": "New landlord", "description": "record-3", "message": "record-3 signed up as a landlord.", "at": "2026-07-30T10:00:00.000Z" },
+        { "type": "rent_paid", "title": "Rent paid", "description": "record-4", "message": "record-4 paid rent.", "at": "2026-07-29T10:00:00.000Z" },
+        { "type": "user_signup", "title": "New tenant", "description": "record-5", "message": "record-5 signed up as a tenant.", "at": "2026-07-28T10:00:00.000Z" },
+        { "type": "user_signup", "title": "New tenant", "description": "record-6-should-be-cut", "message": "record-6 signed up as a tenant.", "at": "2026-07-27T10:00:00.000Z" },
+        { "type": "rent_paid", "title": "Rent paid", "description": "record-7-should-be-cut", "message": "record-7 paid rent.", "at": "2026-07-26T10:00:00.000Z" },
+        { "type": "user_signup", "title": "New tenant", "description": "record-8-should-be-cut", "message": "record-8 signed up as a tenant.", "at": "2026-07-25T10:00:00.000Z" }
+      ]
+    }
+  },
+  "tiedTimestamps": {
+    "message": "Platform activity fetched successfully.",
+    "status": 200,
+    "data": {
+      "summary": {
+        "users": 132,
+        "activeUsers": 105,
+        "suspendedUsers": 1,
+        "landlords": 86,
+        "tenants": 29,
+        "properties": 20,
+        "openRequests": 18,
+        "resolvedRequests": 15,
+        "overduePayments": 24,
+        "rentCollected": 26100
+      },
+      "recent": [
+        { "type": "rent_paid", "title": "Rent paid", "description": "tied-first", "message": "tied-first paid rent.", "at": "2026-07-29T17:27:41.770Z" },
+        { "type": "user_signup", "title": "New tenant", "description": "tied-second", "message": "tied-second signed up as a tenant.", "at": "2026-07-29T17:27:41.770Z" }
+      ]
+    }
+  },
+  "largeCounts": {
+    "message": "Platform activity fetched successfully.",
+    "status": 200,
+    "data": {
+      "summary": {
+        "users": 132456,
+        "activeUsers": 105000,
+        "suspendedUsers": 12345,
+        "landlords": 98765,
+        "tenants": 45678,
+        "properties": 23456,
+        "openRequests": 10234,
+        "resolvedRequests": 15987,
+        "overduePayments": 2400,
+        "rentCollected": 2610000
+      },
+      "recent": [
+        { "type": "rent_paid", "title": "Rent paid", "description": "jeremy", "message": "jeremy paid $800 in rent.", "at": "2026-07-29T17:27:41.770Z" }
+      ]
+    }
+  },
+  "partialSummary": {
+    "message": "Platform activity fetched successfully.",
+    "status": 200,
+    "data": {
+      "summary": {
+        "users": 132,
+        "activeUsers": 105,
+        "landlords": 86,
+        "tenants": 29,
+        "properties": 20,
+        "openRequests": 18,
+        "resolvedRequests": 15,
+        "overduePayments": 24,
+        "rentCollected": 26100
+      },
+      "recent": [
+        { "type": "rent_paid", "title": "Rent paid", "description": "jeremy", "message": "jeremy paid $800 in rent.", "at": "2026-07-29T17:27:41.770Z" }
+      ]
+    }
+  },
+  "empty": {
+    "message": "Platform activity fetched successfully.",
+    "status": 200,
+    "data": {
+      "summary": {
+        "users": 0,
+        "activeUsers": 0,
+        "suspendedUsers": 0,
+        "landlords": 0,
+        "tenants": 0,
+        "properties": 0,
+        "openRequests": 0,
+        "resolvedRequests": 0,
+        "overduePayments": 0,
+        "rentCollected": 0
+      },
+      "recent": []
+    }
+  }
+}

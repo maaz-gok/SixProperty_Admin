@@ -1,0 +1,12 @@
+{
+  "duplicateLetters": {
+    "message": "Today's word fetched successfully.",
+    "status": 200,
+    "data": { "word": "APPLE", "date": "2026-08-02", "length": 5, "index": 168 }
+  },
+  "malformed": {
+    "message": "Today's word fetched successfully.",
+    "status": 200,
+    "data": { "date": "2026-08-02", "length": 5, "index": 168 }
+  }
+}
