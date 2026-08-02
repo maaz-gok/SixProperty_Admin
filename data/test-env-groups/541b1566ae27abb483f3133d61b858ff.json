@@ -1,0 +1,1 @@
+{"id":"541b1566ae27abb483f3133d61b858ff","fullName":"Dashboard/dashboard-todays-word.spec.js:53:7","name":"card is omitted (not shown with a broken state) and the rest of the dashboard is unaffected when the word API fails @regression","status":"passed","testResultsByEnv":{"default":"4542f219e248b738dcf08f9d0784f0ca"}}

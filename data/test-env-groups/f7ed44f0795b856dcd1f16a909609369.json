@@ -1,0 +1,1 @@
+{"id":"f7ed44f0795b856dcd1f16a909609369","fullName":"Dashboard/dashboard-user-section.spec.js:46:7","name":"direct navigation to /profile also redirects to /sign-in @regression","status":"passed","testResultsByEnv":{"default":"728d59264c90bb384efd08b9b7b7f65f"}}

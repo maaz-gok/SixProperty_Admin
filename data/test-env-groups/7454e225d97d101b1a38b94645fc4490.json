@@ -1,0 +1,1 @@
+{"id":"7454e225d97d101b1a38b94645fc4490","fullName":"Dashboard/dashboard-auth-guard.spec.js:7:7","name":"direct navigation without a session redirects to sign-in and never renders protected data @critical","status":"passed","testResultsByEnv":{"default":"b09c24e88c90b704020c32652994042a"}}

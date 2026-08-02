@@ -1,0 +1,1 @@
+{"id":"766d39fdf97317cc3f731f8f5bc87c7e","fullName":"Dashboard/dashboard-user-section.spec.js:32:7","name":"clicking the profile link redirects to /sign-in without clearing the session @critical @regression","status":"passed","testResultsByEnv":{"default":"1a13efce0464c61108308b7e24fe9503"}}
