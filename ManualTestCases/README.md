@@ -28,7 +28,16 @@ Plain-English versions of every automated test in `tests/Auth/`, written so anyo
 | [Dashboard/11-Auth-Guard.md](Dashboard/11-Auth-Guard.md) | Access control — reaching the Dashboard without logging in | TC-121 to TC-122 |
 | [Dashboard/12-Multi-Session.md](Dashboard/12-Multi-Session.md) | Being logged in across multiple tabs/browsers at once | TC-123 to TC-124 |
 | [Dashboard/13-Responsive-Extremes.md](Dashboard/13-Responsive-Extremes.md) | Heavy zoom and phone landscape orientation | TC-125 to TC-126 |
+| [Landlords/01-Initial-Load.md](Landlords/01-Initial-Load.md) | Loading the Landlords list, direct address/reload, table row formatting, column titles | TC-127 to TC-130 |
+| [Landlords/02-Search.md](Landlords/02-Search.md) | Searching by name/email, case/spacing, odd input, no-results, Reset, paging + search | TC-131 to TC-138 |
+| [Landlords/03-Pagination.md](Landlords/03-Pagination.md) | Previous/Next through the full list, refreshing mid-way | TC-139 to TC-140 |
+| [Landlords/04-View-And-Navigation.md](Landlords/04-View-And-Navigation.md) | Opening a landlord's page, Back/Forward, direct address, refresh | TC-141 to TC-145 |
+| [Landlords/05-Suspend-And-Unsuspend.md](Landlords/05-Suspend-And-Unsuspend.md) | Suspending/unsuspending a landlord and its known confirmation gap | TC-146 to TC-150 |
+| [Landlords/06-Data-Consistency.md](Landlords/06-Data-Consistency.md) | Checking the list and details page against the real underlying data | TC-151 to TC-152 |
+| [Landlords/07-Responsive.md](Landlords/07-Responsive.md) | Desktop/tablet/phone layouts for the list and a landlord's page | TC-153 to TC-158 |
+| [Landlords/08-Accessibility.md](Landlords/08-Accessibility.md) | Keyboard-only use, screen reader friendliness, color contrast | TC-159 to TC-162 |
+| [Landlords/09-Error-Empty-Loading-States.md](Landlords/09-Error-Empty-Loading-States.md) | Non-existent landlord pages, empty sections, console errors, logged-out access | TC-163 to TC-167 |
 
-**Total: 126 test cases.**
+**Total: 167 test cases.**
 
-Cases marked with ⚠️ **Known issue** point to a matching bug report in `Bugs/Login/`, `Bugs/ForgotPassword/`, or `Bugs/Dashboard/` — expect those to fail until fixed. Cases marked with ✅ currently pass and are just being watched in case the issue comes back.
+Cases marked with ⚠️ **Known issue** point to a matching bug report in `Bugs/Login/`, `Bugs/ForgotPassword/`, `Bugs/Dashboard/`, or `Bugs/Landlords/` — expect those to fail until fixed. Cases marked with ✅ currently pass and are just being watched in case the issue comes back.

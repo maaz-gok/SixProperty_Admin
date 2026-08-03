@@ -1,0 +1,39 @@
+{
+  "populatedLandlord": {
+    "name": "Jeremy",
+    "apiName": "jeremy",
+    "email": "nostaw22@gmail.com",
+    "id": "6a675df2b50e8fe7db1f0def"
+  },
+  "suspendedZeroCountLandlord": {
+    "name": "Maaz Landlord 200",
+    "email": "maaz+t4_8965351912@geeksofkolachi.com",
+    "id": "6a5e3f6023e8475d54b28fad"
+  },
+  "disposableActiveLandlord": {
+    "name": "Maaz Landlord 398",
+    "email": "maaz+t4_8372466140@geeksofkolachi.com",
+    "id": "6a5e3f5d23e8475d54b28f89"
+  },
+  "disposableActiveLandlord2": {
+    "name": "Maaz Landlord 584",
+    "email": "maaz+t4_4372295646@geeksofkolachi.com",
+    "id": "6a5e3f5b23e8475d54b28f71"
+  },
+  "disposableActiveLandlord3": {
+    "name": "Maaz Landlord 32",
+    "email": "maaz+t4_6294301602@geeksofkolachi.com",
+    "id": "6a5e3f5a23e8475d54b28f5c"
+  },
+  "disposableActiveLandlord4": {
+    "name": "Maaz Landlord 50",
+    "email": "maaz+t4_9189688647@geeksofkolachi.com",
+    "id": "6a5e3f5a23e8475d54b28f5a"
+  },
+  "disposableActiveLandlord5": {
+    "name": "Maaz Landlord 767",
+    "email": "maaz+t4_2608977538@geeksofkolachi.com",
+    "id": "6a5e3f5923e8475d54b28f48"
+  },
+  "nonExistentId": "000000000000000000000000"
+}
