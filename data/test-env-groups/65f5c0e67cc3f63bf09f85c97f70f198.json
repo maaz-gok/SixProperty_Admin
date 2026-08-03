@@ -1,0 +1,1 @@
+{"id":"65f5c0e67cc3f63bf09f85c97f70f198","fullName":"Tenants/tenants-view-navigation.spec.js:60:7","name":"direct URL access to a valid tenant fires exactly one request and renders correctly @smoke","status":"passed","testResultsByEnv":{"default":"be2124658062026ebed72f2d2006a161"}}

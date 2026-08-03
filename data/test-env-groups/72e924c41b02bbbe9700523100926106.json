@@ -1,1 +1,1 @@
-{"id":"72e924c41b02bbbe9700523100926106","fullName":"Auth/admin-forgot-password-form.spec.js:41:7","name":"invalid email format is blocked once the field has been touched @critical","status":"passed","testResultsByEnv":{"default":"0b447b9b920dc2b68e1e01f2f57d1781"}}
+{"id":"72e924c41b02bbbe9700523100926106","fullName":"Auth/admin-forgot-password-form.spec.js:41:7","name":"invalid email format is blocked once the field has been touched @critical","status":"passed","testResultsByEnv":{"default":"cc236943b4a69550b601f61b67e15185"}}

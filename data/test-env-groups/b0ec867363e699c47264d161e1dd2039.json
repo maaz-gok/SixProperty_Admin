@@ -1,0 +1,1 @@
+{"id":"b0ec867363e699c47264d161e1dd2039","fullName":"Tenants/tenants-detail-documents.spec.js:30:7","name":"clicking a document opens a preview dialog with a working \"Open in new tab\" link @smoke @critical","status":"passed","testResultsByEnv":{"default":"2d6447151cf638a4480c1903e0ca0d80"}}

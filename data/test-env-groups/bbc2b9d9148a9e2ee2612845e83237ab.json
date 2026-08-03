@@ -1,1 +1,1 @@
-{"id":"bbc2b9d9148a9e2ee2612845e83237ab","fullName":"Dashboard/dashboard-sidebar-collapse.spec.js:69:7","name":"sidebar is collapsed by default on mobile, expanded on tablet and desktop @regression","status":"passed","testResultsByEnv":{"default":"6d109cd148271ef0a2f0cb7bb89d5a11"}}
+{"id":"bbc2b9d9148a9e2ee2612845e83237ab","fullName":"Dashboard/dashboard-sidebar-collapse.spec.js:69:7","name":"sidebar is collapsed by default on mobile, expanded on tablet and desktop @regression","status":"passed","testResultsByEnv":{"default":"5a864225a04766a302f0f1249f1fdecb"}}
