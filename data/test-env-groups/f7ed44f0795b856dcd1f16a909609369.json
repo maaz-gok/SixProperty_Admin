@@ -1,1 +1,1 @@
-{"id":"f7ed44f0795b856dcd1f16a909609369","fullName":"Dashboard/dashboard-user-section.spec.js:46:7","name":"direct navigation to /profile also redirects to /sign-in @regression","status":"passed","testResultsByEnv":{"default":"9c116ce7c6368c75d885e1ea96611cec"}}
+{"id":"f7ed44f0795b856dcd1f16a909609369","fullName":"Dashboard/dashboard-user-section.spec.js:46:7","name":"direct navigation to /profile also redirects to /sign-in @regression","status":"passed","testResultsByEnv":{"default":"31407de4097e953bbfd3493082c78e56"}}

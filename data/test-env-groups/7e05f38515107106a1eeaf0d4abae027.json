@@ -1,1 +1,1 @@
-{"id":"7e05f38515107106a1eeaf0d4abae027","fullName":"Dashboard/dashboard-sign-out.spec.js:6:7","name":"clears the session and redirects, blocking further protected access @critical","status":"passed","testResultsByEnv":{"default":"706bcafee0bc7a1415d6ee10ce6f7472"}}
+{"id":"7e05f38515107106a1eeaf0d4abae027","fullName":"Dashboard/dashboard-sign-out.spec.js:6:7","name":"clears the session and redirects, blocking further protected access @critical","status":"passed","testResultsByEnv":{"default":"31b06ed63fe077ce4c1fb2c6a7e8a921"}}

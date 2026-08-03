@@ -1,1 +1,1 @@
-{"id":"2b0ed732e60f172fdf136d080126eade","fullName":"Auth/admin-login-page-load.spec.js:41:7","name":"direct navigation and reload keep the login page stable @regression","status":"passed","testResultsByEnv":{"default":"2145edb46cbc084448f01d6f6fbe3e7b"}}
+{"id":"2b0ed732e60f172fdf136d080126eade","fullName":"Auth/admin-login-page-load.spec.js:41:7","name":"direct navigation and reload keep the login page stable @regression","status":"passed","testResultsByEnv":{"default":"dfc2401dcec9087a7bc40cfcd9e75fb9"}}
