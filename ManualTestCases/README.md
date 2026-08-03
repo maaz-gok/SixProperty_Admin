@@ -37,7 +37,22 @@ Plain-English versions of every automated test in `tests/Auth/`, written so anyo
 | [Landlords/07-Responsive.md](Landlords/07-Responsive.md) | Desktop/tablet/phone layouts for the list and a landlord's page | TC-153 to TC-158 |
 | [Landlords/08-Accessibility.md](Landlords/08-Accessibility.md) | Keyboard-only use, screen reader friendliness, color contrast | TC-159 to TC-162 |
 | [Landlords/09-Error-Empty-Loading-States.md](Landlords/09-Error-Empty-Loading-States.md) | Non-existent landlord pages, empty sections, console errors, logged-out access | TC-163 to TC-167 |
+| [Tenants/01-Initial-Load.md](Tenants/01-Initial-Load.md) | Loading the Tenants list, direct address/reload | TC-168 to TC-169 |
+| [Tenants/02-Table-Validation.md](Tenants/02-Table-Validation.md) | Row formatting, duplicate emails, long/short values | TC-170 to TC-172 |
+| [Tenants/03-Search.md](Tenants/03-Search.md) | Searching by name/email, case/spacing, odd input, no-results/Reset | TC-173 to TC-176 |
+| [Tenants/04-Status-Filter.md](Tenants/04-Status-Filter.md) | Active/Invited/Pending filter, combined with search, Reset | TC-177 to TC-179 |
+| [Tenants/05-Pagination.md](Tenants/05-Pagination.md) | Previous/Next through the full list, filtered page counts | TC-180 to TC-181 |
+| [Tenants/06-View-And-Navigation.md](Tenants/06-View-And-Navigation.md) | Opening a tenant's page, Back/Forward, direct address, refresh | TC-182 to TC-186 |
+| [Tenants/07-Suspend-And-Unsuspend.md](Tenants/07-Suspend-And-Unsuspend.md) | Suspending a tenant, its known confirmation and row-update gaps, the admin-linked account | TC-187 to TC-190 |
+| [Tenants/08-Detail-Header-Info.md](Tenants/08-Detail-Header-Info.md) | Header photo/initials, Tenant Information fields | TC-191 to TC-193 |
+| [Tenants/09-Detail-Profile.md](Tenants/09-Detail-Profile.md) | Profile section fields, populated vs. empty | TC-194 to TC-195 |
+| [Tenants/10-Detail-Documents.md](Tenants/10-Detail-Documents.md) | Document buttons, preview dialog, missing documents | TC-196 to TC-198 |
+| [Tenants/11-Detail-Pets.md](Tenants/11-Detail-Pets.md) | Zero/one/multiple pet cards | TC-199 to TC-201 |
+| [Tenants/12-Data-Consistency.md](Tenants/12-Data-Consistency.md) | Checking the list and details page against the real underlying data | TC-202 to TC-203 |
+| [Tenants/13-Responsive.md](Tenants/13-Responsive.md) | Desktop/tablet/phone layouts for the list and a tenant's page | TC-204 to TC-209 |
+| [Tenants/14-Accessibility.md](Tenants/14-Accessibility.md) | Keyboard-only use, screen reader friendliness | TC-210 to TC-212 |
+| [Tenants/15-Error-Empty-Loading-States.md](Tenants/15-Error-Empty-Loading-States.md) | Non-existent tenant pages, empty sections, console errors, logged-out access | TC-213 to TC-217 |
 
-**Total: 167 test cases.**
+**Total: 217 test cases.**
 
-Cases marked with ⚠️ **Known issue** point to a matching bug report in `Bugs/Login/`, `Bugs/ForgotPassword/`, `Bugs/Dashboard/`, or `Bugs/Landlords/` — expect those to fail until fixed. Cases marked with ✅ currently pass and are just being watched in case the issue comes back.
+Cases marked with ⚠️ **Known issue** point to a matching bug report in `Bugs/Login/`, `Bugs/ForgotPassword/`, `Bugs/Dashboard/`, `Bugs/Landlords/`, or `Bugs/Tenants/` — expect those to fail until fixed. Cases marked with ✅ currently pass and are just being watched in case the issue comes back.

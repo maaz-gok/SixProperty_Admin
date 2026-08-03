@@ -1,0 +1,47 @@
+{
+  "realClientTenant": {
+    "name": "Jeremy",
+    "apiName": "jeremy",
+    "email": "jwatson@thesixpm.com",
+    "id": "6a68956506f2386a813b234e"
+  },
+  "richProfileTenant": {
+    "name": "Maaz Tenant",
+    "email": "maaz+t@geeksofkolachi.com",
+    "id": "6a4b925be9b8b22c61bd46cb"
+  },
+  "sparseTenant": {
+    "name": "Anus Tenant",
+    "email": "anus.ahmed+ten@geeksofkolachi.com",
+    "id": "6a310cab7ccd75cd631cab09",
+    "userId": "6a310d2f7ccd75cd631cab27"
+  },
+  "onePetTenant": {
+    "name": "Alex",
+    "email": "anus.ahmed+e2@geeksofkolachi.com",
+    "id": "6a561a6b3f763eeeff4f3694"
+  },
+  "adminLinkedTenant": {
+    "name": "Ahmed Khan",
+    "email": "mudassir+909@geeksofkolachi.com",
+    "id": "6a2fd9073dc408ffdaf3305c",
+    "userId": "6a2fd9703dc408ffdaf3306f"
+  },
+  "disposableActiveTenant2": {
+    "name": "Maaz Tenant T3",
+    "email": "maaz+t3@geeksofkolachi.com",
+    "id": "6a5dcafb23e8475d54b276bd",
+    "userId": "6a5dd05d23e8475d54b27b72"
+  },
+  "disposableActiveTenant3": {
+    "name": "Maaz Tenant T4",
+    "email": "maaz+t4@geeksofkolachi.com",
+    "id": "6a5ddf5a23e8475d54b28342",
+    "userId": "6a5ddfa823e8475d54b28399"
+  },
+  "duplicateEmail": {
+    "email": "anus.ahmed+76@geeksofkolachi.com",
+    "names": ["Alex", "Jame"]
+  },
+  "nonExistentId": "000000000000000000000000"
+}
