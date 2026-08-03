@@ -1,1 +1,1 @@
-{"id":"6836ce1395dee7e565e533a64e6068b1","fullName":"Auth/admin-login-security.spec.js:70:7","name":"no credential or token value appears in the URL after login @regression","status":"passed","testResultsByEnv":{"default":"5573a122e41f93a23719f3fc29b42231"}}
+{"id":"6836ce1395dee7e565e533a64e6068b1","fullName":"Auth/admin-login-security.spec.js:70:7","name":"no credential or token value appears in the URL after login @regression","status":"passed","testResultsByEnv":{"default":"6c349fe85812d4087ddf1ac9ca684b94"}}

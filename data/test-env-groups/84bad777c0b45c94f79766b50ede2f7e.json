@@ -1,0 +1,1 @@
+{"id":"84bad777c0b45c94f79766b50ede2f7e","fullName":"Landlords/landlords-suspend.spec.js:81:7","name":"the Suspend button disables immediately, so a rapid second click cannot send a duplicate request @regression","status":"passed","testResultsByEnv":{"default":"a2084570d48c1882e674b146aa2ecfc6"}}

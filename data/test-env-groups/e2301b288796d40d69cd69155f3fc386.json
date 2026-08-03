@@ -1,0 +1,1 @@
+{"id":"e2301b288796d40d69cd69155f3fc386","fullName":"Landlords/landlords-search.spec.js:142:7","name":"search state does not survive a reload @regression","status":"passed","testResultsByEnv":{"default":"8b3637b87da4c95526d786ebd136781a"}}
