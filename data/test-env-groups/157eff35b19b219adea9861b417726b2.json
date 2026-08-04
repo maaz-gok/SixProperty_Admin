@@ -1,0 +1,1 @@
+{"id":"157eff35b19b219adea9861b417726b2","fullName":"PlatformActivity/platform-activity-timestamps.spec.js:68:7","name":"recent and older activity both use the same absolute date+time format, never relative time @regression","status":"passed","testResultsByEnv":{"default":"9e7c8d3d2397dcde273c41631d8e00da"}}

@@ -1,0 +1,1 @@
+{"id":"80266a421cea6e095fdaefab9054fde2","fullName":"MaintenanceRequests/maintenance-requests-data-consistency.spec.js:77:7","name":"details page matches the Detail API field-for-field, including nested objects @smoke @critical","status":"passed","testResultsByEnv":{"default":"6d1f39092e3b49ef32035c1228f90808"}}

@@ -1,0 +1,1 @@
+{"id":"1a30eed652ee0a725c3424c14dc0371a","fullName":"PlatformActivity/platform-activity-performance.spec.js:18:7","name":"exactly one request fires for a normal page load @regression @critical","status":"passed","testResultsByEnv":{"default":"c8caaa6670da2772961157ebb464a2e4"}}

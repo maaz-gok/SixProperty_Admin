@@ -1,0 +1,1 @@
+{"id":"632138d204ae2b7117bbdb05b06bcfb1","fullName":"Properties/properties-error-states.spec.js:86:7","name":"an unauthenticated request for the listing or a details page redirects to sign-in @regression","status":"passed","testResultsByEnv":{"default":"b55d0402994d612762678c9212aeedb9"}}

@@ -1,0 +1,1 @@
+{"id":"610709fdd11abda1429b34060e0a845f","fullName":"PlatformActivity/platform-activity-accessibility.spec.js:41:7","name":"pagination buttons expose their disabled state to assistive technology, not just visually @regression","status":"passed","testResultsByEnv":{"default":"832c069196bf13aa59e7df7ce5327fe2"}}

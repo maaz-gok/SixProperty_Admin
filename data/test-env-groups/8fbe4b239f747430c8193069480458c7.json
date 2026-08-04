@@ -1,0 +1,1 @@
+{"id":"8fbe4b239f747430c8193069480458c7","fullName":"PlatformActivity/platform-activity-table.spec.js:72:7","name":"special characters ($ : .) in messages render as plain text @regression","status":"passed","testResultsByEnv":{"default":"05a9eb56bbf6ae17eefcebd94b3d16c2"}}

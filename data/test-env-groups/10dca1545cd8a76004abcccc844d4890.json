@@ -1,0 +1,1 @@
+{"id":"10dca1545cd8a76004abcccc844d4890","fullName":"Properties/properties-search.spec.js:67:7","name":"search is case-insensitive and tolerates leading/trailing whitespace @regression","status":"failed","testResultsByEnv":{"default":"e9c06a412a9934fed9599d16cd7f8104"}}

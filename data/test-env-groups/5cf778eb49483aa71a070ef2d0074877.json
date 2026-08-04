@@ -1,1 +1,1 @@
-{"id":"5cf778eb49483aa71a070ef2d0074877","fullName":"Landlords/landlords-responsive.spec.js:50:7","name":"tablet (768px): the page itself should not scroll horizontally @regression","status":"failed","testResultsByEnv":{"default":"80271d63aba65dd76185e13c150fb16b"}}
+{"id":"5cf778eb49483aa71a070ef2d0074877","fullName":"Landlords/landlords-responsive.spec.js:50:7","name":"tablet (768px): the page itself should not scroll horizontally @regression","status":"failed","testResultsByEnv":{"default":"6c3e479b829945b0c03148a816ac6db2"}}

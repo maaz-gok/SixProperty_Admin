@@ -1,1 +1,1 @@
-{"id":"fc38ce08daa8affa4f7bc7bc7c266421","fullName":"Auth/admin-login-page-load.spec.js:58:7","name":"login logo matches the reference brand asset (Resources/Correct_Logo.png) @regression","status":"failed","testResultsByEnv":{"default":"800e550ef373bde54534347a1a8c731e"}}
+{"id":"fc38ce08daa8affa4f7bc7bc7c266421","fullName":"Auth/admin-login-page-load.spec.js:58:7","name":"login logo matches the reference brand asset (Resources/Correct_Logo.png) @regression","status":"failed","testResultsByEnv":{"default":"1a453b0702aece291a2887f1bd4b75b5"}}

@@ -1,0 +1,1 @@
+{"id":"2b1a846c462b57d6eb892a4fadcd5da9","fullName":"MaintenanceRequests/maintenance-requests-search.spec.js:105:7","name":"Reset clears the search and restores the unfiltered page-1 list @regression","status":"passed","testResultsByEnv":{"default":"d59b074b73effb9e9ba0abd0dfe1ec5b"}}

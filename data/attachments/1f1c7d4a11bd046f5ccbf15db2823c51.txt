@@ -1,0 +1,1 @@
+[perf] load event: 669.4000000000233 ms | DOMContentLoaded: 667.9000000000233 ms

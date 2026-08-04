@@ -1,0 +1,1 @@
+{"id":"d3c48584dfc5a37216d16b079fc7e0fd","fullName":"PlatformActivity/platform-activity-error-states.spec.js:17:7","name":"an empty API response renders an empty state, not a crash @regression","status":"passed","testResultsByEnv":{"default":"c35395201597b018b995a30d0e1caf4d"}}

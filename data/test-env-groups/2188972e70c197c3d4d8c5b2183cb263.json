@@ -1,0 +1,1 @@
+{"id":"2188972e70c197c3d4d8c5b2183cb263","fullName":"Properties/properties-details.spec.js:133:7","name":"a missing Details field renders as an em dash, not blank @regression","status":"passed","testResultsByEnv":{"default":"771aa0ea6471dc0078cabb1df8b5dd90"}}
