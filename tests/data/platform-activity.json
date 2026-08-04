@@ -1,0 +1,28 @@
+{
+  "signUpTenantExample": {
+    "message": "jeremy signed up as a tenant.",
+    "type": "Sign Up",
+    "title": "New tenant"
+  },
+  "signUpLandlordExample": {
+    "message": "jeremy signed up as a landlord.",
+    "type": "Sign Up",
+    "title": "New landlord"
+  },
+  "rentPaidExample": {
+    "message": "jeremy paid $800 in rent.",
+    "type": "Rent Paid",
+    "title": "Rent paid"
+  },
+  "maintenanceRequestExample": {
+    "message": "New maintenance request for A-101: Keys issue.",
+    "type": "Maintenance",
+    "title": "New request"
+  },
+  "adminSignupGrammarBug": {
+    "message": "Admin signed up as a admin.",
+    "type": "Sign Up",
+    "title": "New admin",
+    "correctMessage": "Admin signed up as an admin."
+  }
+}

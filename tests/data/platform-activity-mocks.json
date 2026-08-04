@@ -1,0 +1,93 @@
+{
+  "emptyFeed": {
+    "message": "Activity feed fetched successfully.",
+    "status": 200,
+    "data": {
+      "items": [],
+      "pagination": {
+        "currentPage": 1,
+        "totalPages": 1,
+        "totalItems": 0,
+        "itemsPerPage": 20,
+        "hasNextPage": false,
+        "hasPrevPage": false
+      }
+    }
+  },
+  "singlePage": {
+    "message": "Activity feed fetched successfully.",
+    "status": 200,
+    "data": {
+      "items": [
+        {
+          "type": "user_signup",
+          "title": "New tenant",
+          "description": "mock tenant",
+          "message": "mock tenant signed up as a tenant.",
+          "at": "2026-08-01T10:00:00.000Z"
+        },
+        {
+          "type": "rent_paid",
+          "title": "Rent paid",
+          "description": "mock tenant — $500",
+          "message": "mock tenant paid $500 in rent.",
+          "at": "2026-07-31T10:00:00.000Z"
+        }
+      ],
+      "pagination": {
+        "currentPage": 1,
+        "totalPages": 1,
+        "totalItems": 2,
+        "itemsPerPage": 20,
+        "hasNextPage": false,
+        "hasPrevPage": false
+      }
+    }
+  },
+  "missingFields": {
+    "message": "Activity feed fetched successfully.",
+    "status": 200,
+    "data": {
+      "items": [
+        {
+          "type": "user_signup",
+          "title": null,
+          "description": "mock",
+          "message": null,
+          "at": "2026-08-01T10:00:00.000Z"
+        }
+      ],
+      "pagination": {
+        "currentPage": 1,
+        "totalPages": 1,
+        "totalItems": 1,
+        "itemsPerPage": 20,
+        "hasNextPage": false,
+        "hasPrevPage": false
+      }
+    }
+  },
+  "unrecognizedType": {
+    "message": "Activity feed fetched successfully.",
+    "status": 200,
+    "data": {
+      "items": [
+        {
+          "type": "lease_signed",
+          "title": "Lease signed",
+          "description": "mock",
+          "message": "mock tenant signed a new lease.",
+          "at": "2026-08-01T10:00:00.000Z"
+        }
+      ],
+      "pagination": {
+        "currentPage": 1,
+        "totalPages": 1,
+        "totalItems": 1,
+        "itemsPerPage": 20,
+        "hasNextPage": false,
+        "hasPrevPage": false
+      }
+    }
+  }
+}

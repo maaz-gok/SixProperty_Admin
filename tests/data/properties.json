@@ -1,0 +1,62 @@
+{
+  "populatedProperty": {
+    "name": "Grove",
+    "address": "307 Grove Street Honesdale, PA 18431",
+    "id": "6a675f0cb50e8fe7db1f0ea6",
+    "landlord": "Jeremy",
+    "landlordEmail": "nostaw22@gmail.com",
+    "unit": "1-2",
+    "tenantsCount": 1,
+    "openRequests": 0,
+    "tenant": {
+      "name": "Jeremy",
+      "email": "jwatson@thesixpm.com",
+      "phone": "5703525162",
+      "unit": "1-2",
+      "rent": "$800",
+      "status": "Active"
+    }
+  },
+  "zeroTenantProperty": {
+    "name": "Green Valley Residences",
+    "address": "789 Oak Avenue, Austin, TX",
+    "id": "6a5e015a23e8475d54b28c22",
+    "landlord": "Maaz Landlord",
+    "landlordEmail": "maaz+landlord@geeksofkolachi.com",
+    "unit": "Shop 12",
+    "tenantsCount": 0,
+    "openRequests": 0,
+    "details": "Spacious apartment with balcony and gym access.",
+    "created": "Jul 20, 2026"
+  },
+  "multiTenantProperty": {
+    "name": "The Marlowe",
+    "address": "New York , 78901",
+    "id": "6a5619cf3f763eeeff4f3619",
+    "landlord": "James Landlord",
+    "landlordEmail": "anus.ahmed+d1@geeksofkolachi.com",
+    "unit": "Unit 314",
+    "tenantsCount": 2,
+    "openRequests": 0,
+    "created": "Jul 14, 2026",
+    "detailsFieldWhenMissing": "—"
+  },
+  "longAddressProperty": {
+    "name": "Sunset Residency",
+    "address": "H No. 12, Block B, Clifton Karachi",
+    "id": "6a4b8f3ee9b8b22c61bd4588",
+    "landlord": "Maaz Landlord",
+    "unit": "A-102",
+    "tenantsCount": 2
+  },
+  "missingUnitProperty": {
+    "name": "Fortune Heights",
+    "address": "248 West 73rd St, New York",
+    "landlord": "Anus",
+    "unit": "—",
+    "tenantsCount": 0
+  },
+  "duplicateNamedProperty": "The Marlowe",
+  "nonExistentId": "000000000000000000000000",
+  "malformedId": "not-a-valid-id"
+}

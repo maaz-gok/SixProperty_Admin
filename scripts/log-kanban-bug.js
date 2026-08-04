@@ -31,11 +31,17 @@ function detectAssignee(text) {
   return { key: feHits > beHits ? 'fe' : 'be', feHits, beHits };
 }
 
+const VALID_TASK_TYPES = ['Bug', 'Task'];
+const taskType = process.env.KANBAN_TYPE || 'Bug';
+
 if (!loginEmail || !loginPassword) {
   throw new Error('KANBAN_EMAIL and KANBAN_PASSWORD environment variables are required.');
 }
 if (!bugFilePath) {
   throw new Error('Usage: node scripts/log-kanban-bug.js <path-to-bug-file> [attachment ...]');
+}
+if (!VALID_TASK_TYPES.includes(taskType)) {
+  throw new Error(`KANBAN_TYPE must be one of: ${VALID_TASK_TYPES.join(', ')} (got "${taskType}"). The board only supports these two types.`);
 }
 
 const authUrl = `${apiBase}/auth/login`;
@@ -391,6 +397,7 @@ async function main() {
 
   const priority = resolvePriority(raw);
   log('Resolved priority:', priority);
+  log('Task type:', taskType);
 
   const payload = {
     projectId: resolvedProjectId,
@@ -398,7 +405,7 @@ async function main() {
     description,
     status: 'To Do',
     priority,
-    type: 'Bug',
+    type: taskType,
     ...(assigneeId && { assignees: [assigneeId] }),
   };
 

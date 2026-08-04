@@ -52,7 +52,37 @@ Plain-English versions of every automated test in `tests/Auth/`, written so anyo
 | [Tenants/13-Responsive.md](Tenants/13-Responsive.md) | Desktop/tablet/phone layouts for the list and a tenant's page | TC-204 to TC-209 |
 | [Tenants/14-Accessibility.md](Tenants/14-Accessibility.md) | Keyboard-only use, screen reader friendliness | TC-210 to TC-212 |
 | [Tenants/15-Error-Empty-Loading-States.md](Tenants/15-Error-Empty-Loading-States.md) | Non-existent tenant pages, empty sections, console errors, logged-out access | TC-213 to TC-217 |
+| [Properties/01-Initial-Load.md](Properties/01-Initial-Load.md) | Loading the Properties list, direct address/reload, moving to another page and back | TC-218 to TC-220 |
+| [Properties/02-Table-Validation.md](Properties/02-Table-Validation.md) | Row formatting, missing Unit, duplicate property names, column titles | TC-221 to TC-224 |
+| [Properties/03-Search.md](Properties/03-Search.md) | Searching by name/address, case/spacing, odd input, no-results, Reset | TC-225 to TC-232 |
+| [Properties/04-Details-Page.md](Properties/04-Details-Page.md) | Opening a property's page, summary numbers, Property Information, Tenants table | TC-233 to TC-241 |
+| [Properties/05-Navigation.md](Properties/05-Navigation.md) | Back/Forward, direct address, refresh, console errors | TC-242 to TC-248 |
+| [Properties/06-Pagination.md](Properties/06-Pagination.md) | Previous/Next with the current single page of properties | TC-249 |
+| [Properties/07-Error-Empty-Loading-States.md](Properties/07-Error-Empty-Loading-States.md) | Non-existent property pages, logged-out access | TC-250 to TC-253 |
+| [Properties/08-Data-Consistency.md](Properties/08-Data-Consistency.md) | Checking the list and details page against the real underlying data | TC-254 to TC-255 |
+| [Properties/09-Responsive.md](Properties/09-Responsive.md) | Desktop/tablet/phone layouts for the list and a property's page | TC-256 to TC-259 |
+| [MaintenanceRequests/01-Initial-Load.md](MaintenanceRequests/01-Initial-Load.md) | Loading the list, status dropdown options, row formatting, direct address/reload | TC-260 to TC-264 |
+| [MaintenanceRequests/02-Search.md](MaintenanceRequests/02-Search.md) | Searching by title/tenant, case/spacing, odd input, no-results, Reset | TC-265 to TC-273 |
+| [MaintenanceRequests/03-Status-Filter.md](MaintenanceRequests/03-Status-Filter.md) | Open/In Progress/Resolved filters, combined with search, Reset | TC-274 to TC-281 |
+| [MaintenanceRequests/04-Pagination.md](MaintenanceRequests/04-Pagination.md) | Previous/Next through the full list, filtered page counts | TC-282 to TC-288 |
+| [MaintenanceRequests/05-Details-Page.md](MaintenanceRequests/05-Details-Page.md) | Opening a request's page, the 3 badges, Request Information, description | TC-289 to TC-297 |
+| [MaintenanceRequests/06-Attachments-And-Notes.md](MaintenanceRequests/06-Attachments-And-Notes.md) | Attachment previews (photo/video), notes order, empty states | TC-298 to TC-306 |
+| [MaintenanceRequests/07-Navigation.md](MaintenanceRequests/07-Navigation.md) | Back/Forward, direct address, refresh, console errors | TC-307 to TC-312 |
+| [MaintenanceRequests/08-Data-Consistency.md](MaintenanceRequests/08-Data-Consistency.md) | Checking the list and details page against the real underlying data | TC-313 to TC-315 |
+| [MaintenanceRequests/09-Responsive.md](MaintenanceRequests/09-Responsive.md) | Desktop/tablet/phone layouts for the list and a request's page | TC-316 to TC-320 |
+| [MaintenanceRequests/10-Error-Empty-Loading-States.md](MaintenanceRequests/10-Error-Empty-Loading-States.md) | Non-existent request pages, logged-out access | TC-321 to TC-324 |
+| [MaintenanceRequests/11-Performance.md](MaintenanceRequests/11-Performance.md) | Single server checks, no duplicate requests, full console sweep | TC-325 to TC-328 |
+| [PlatformActivity/01-Initial-Load.md](PlatformActivity/01-Initial-Load.md) | Loading the activity feed, no search/filter exists, direct address/reload | TC-329 to TC-334 |
+| [PlatformActivity/02-Activity-Table.md](PlatformActivity/02-Activity-Table.md) | Row formatting for each activity kind, special characters, table structure | TC-335 to TC-340 |
+| [PlatformActivity/03-Activity-Types.md](PlatformActivity/03-Activity-Types.md) | Sign Up/Rent Paid/Maintenance badges, colours, no unexpected types | TC-341 to TC-345 |
+| [PlatformActivity/04-Timestamp-Validation.md](PlatformActivity/04-Timestamp-Validation.md) | Date/time format, newest-first ordering, no relative time | TC-346 to TC-350 |
+| [PlatformActivity/05-Pagination.md](PlatformActivity/05-Pagination.md) | Previous/Next through the full feed, last page, refresh | TC-351 to TC-357 |
+| [PlatformActivity/06-Data-Consistency.md](PlatformActivity/06-Data-Consistency.md) | Checking the feed against the real underlying data | TC-358 to TC-361 |
+| [PlatformActivity/07-Responsive.md](PlatformActivity/07-Responsive.md) | Desktop/tablet/phone layouts (confirmed clean at every width) | TC-362 to TC-364 |
+| [PlatformActivity/08-Accessibility.md](PlatformActivity/08-Accessibility.md) | Keyboard-only use, screen reader friendliness | TC-365 to TC-367 |
+| [PlatformActivity/09-Error-Empty-Loading-States.md](PlatformActivity/09-Error-Empty-Loading-States.md) | Empty feed, server errors, missing fields (requires network-faking tools) | TC-368 to TC-372 |
+| [PlatformActivity/10-Performance.md](PlatformActivity/10-Performance.md) | Single server checks, no duplicate requests, no console errors | TC-373 to TC-376 |
 
-**Total: 217 test cases.**
+**Total: 376 test cases.**
 
-Cases marked with ⚠️ **Known issue** point to a matching bug report in `Bugs/Login/`, `Bugs/ForgotPassword/`, `Bugs/Dashboard/`, `Bugs/Landlords/`, or `Bugs/Tenants/` — expect those to fail until fixed. Cases marked with ✅ currently pass and are just being watched in case the issue comes back.
+Cases marked with ⚠️ **Known issue** point to a matching bug report in `Bugs/Login/`, `Bugs/ForgotPassword/`, `Bugs/Dashboard/`, `Bugs/Landlords/`, `Bugs/Tenants/`, `Bugs/Properties/`, `Bugs/MaintenanceRequests/`, or `Bugs/PlatformActivity/` — expect those to fail until fixed. Cases marked with ✅ currently pass and are just being watched in case the issue comes back.

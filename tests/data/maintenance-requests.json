@@ -1,0 +1,52 @@
+{
+  "resolvedNoAttachments": {
+    "title": "Keys issue",
+    "id": "6a59d9db23e8475d54b26690",
+    "property": "Sunset Residency",
+    "address": "H No. 12, Block B, Clifton Karachi",
+    "unit": "A-102",
+    "landlord": "Maaz Landlord",
+    "landlordEmail": "maaz+m@geeksofkolachi.com",
+    "tenant": "Maaz Tenant",
+    "tenantEmail": "maaz+t@geeksofkolachi.com",
+    "tenantPhone": "03313658990",
+    "allowEntry": "Yes",
+    "status": "Resolved",
+    "priority": "Urgent",
+    "category": "Other",
+    "created": "Jul 17, 2026",
+    "notes": ["Aj apka kaam hojaiga", "Resolved, kindly check"]
+  },
+  "resolvedWithAttachments": {
+    "title": "Keys Stuck in door",
+    "id": "6a59d81b23e8475d54b26528",
+    "property": "Sunset Residency",
+    "tenant": "Maaz Tenant",
+    "status": "Resolved",
+    "priority": "Urgent",
+    "category": "Doors Locks",
+    "created": "Jul 17, 2026",
+    "attachmentCount": 2,
+    "imageAttachmentLabel": "Attachment 2",
+    "videoAttachmentLabel": "Attachment 1",
+    "notes": ["Ok", "Hogya apka kaam"]
+  },
+  "openEmptyState": {
+    "title": "Test",
+    "id": "6a45282a2614b2f59c8cf2c4",
+    "property": "Apex Height",
+    "tenant": "Karishma",
+    "landlord": "Anus",
+    "status": "Open",
+    "priority": "Medium",
+    "category": "Plumbing",
+    "allowEntry": "No",
+    "created": "Jul 1, 2026"
+  },
+  "tenantSearchOnly": "Karishma",
+  "tenantSearchOnlyExpectedCount": 5,
+  "titleSearchTerm": "Key",
+  "titleSearchExpectedCount": 2,
+  "nonExistentId": "000000000000000000000000",
+  "malformedId": "not-a-valid-id"
+}
